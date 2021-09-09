@@ -1,4 +1,3 @@
-import {createHomePage} from './home';
+import {homePage} from './home';
 
-createHomePage.createHeader();
-createHomePage.createNavBtns();
+homePage.createPage();
