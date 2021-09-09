@@ -23,7 +23,7 @@ body{
     align-items: center;
 }
 
-#content-container{
+.content-container{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ body{
     background-size: auto;
 }
 
-#content-child{
+.content-child{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,14 +44,14 @@ body{
     background-color: rgba(1,1,1,0.75);
 }
 
-#restaurant-name{
+.restaurant-name{
     width:fit-content;
     margin: 20px;
     color:white;
     height: fit-content;
 }
 
-#restaurant-about{
+.restaurant-about{
     width: fit-content;
     color: white;
     margin-left: 20px;
