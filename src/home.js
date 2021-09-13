@@ -1,37 +1,41 @@
 const homePage = (() => {
 
-    const _contentDiv = document.querySelector('#content');
-    const _navBar = document.createElement('div');
-    const _contentContainer = document.createElement('div');
+    const contentDiv = document.querySelector('#content');
+    const navBar = document.createElement('div');
+    const contentContainer = document.createElement('div');
 
-    const _createHeader = () => {
-        _navBar.classList.add("nav-bar");
-        _contentDiv.appendChild(_navBar);
+    const createHeader = () => {
+        navBar.classList.add("nav-bar");
+        contentDiv.appendChild(navBar);
     };
 
-    const _createNavBtns = () => {
+    const createNavBtns = () => {
         const homeBtn = document.createElement('div');
         const menuBtn = document.createElement('div');
         const contactBtn = document.createElement('div');
 
-        _navBar.appendChild(homeBtn);
-        _navBar.appendChild(menuBtn);
-        _navBar.appendChild(contactBtn);
+        homeBtn.classList.add('nav-btns');
+        menuBtn.classList.add('nav-btns');
+        contactBtn.classList.add('nav-btns');
+
+        navBar.appendChild(homeBtn);
+        navBar.appendChild(menuBtn);
+        navBar.appendChild(contactBtn);
 
         homeBtn.textContent = "Home";
         menuBtn.textContent = "Menu";
         contactBtn.textContent = "Contact";
     };
 
-    const _createContentContainer = () => {
-        _contentContainer.classList.add('content-container');
-        _contentDiv.appendChild(_contentContainer);
+    const createContentContainer = () => {
+        contentContainer.classList.add('content-container');
+        contentDiv.appendChild(contentContainer);
     };
 
     const _createContent = () => {
         const contentChild = document.createElement('div');
         contentChild.classList.add('content-child');
-        _contentContainer.appendChild(contentChild);
+        contentContainer.appendChild(contentChild);
 
         const restaurantName = document.createElement('div');
         const restaurantAbout = document.createElement('div');
@@ -51,13 +55,19 @@ const homePage = (() => {
     };
 
     const createPage = () => {
-        _createHeader();
-        _createNavBtns();
-        _createContentContainer();
-        _createContent();
+        createHeader();
+        createNavBtns();
+        createContentContainer();
+        createContent();
     };
 
-    return { createPage };
+    const removeContent = () => {
+        while (contentDiv.firstChild) {
+            contentDiv.removeChild(contentDiv.firstChild);
+        };
+    };
+
+    return { createPage, removeContent, createHeader, createNavBtns, createContentContainer };
 })();
 
 export {homePage};
