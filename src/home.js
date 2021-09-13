@@ -3,6 +3,7 @@ const homePage = (() => {
     const contentDiv = document.querySelector('#content');
     const navBar = document.createElement('div');
     const contentContainer = document.createElement('div');
+    const contentChild = document.createElement('div');
 
     const createHeader = () => {
         navBar.classList.add("nav-bar");
@@ -32,8 +33,8 @@ const homePage = (() => {
         contentDiv.appendChild(contentContainer);
     };
 
-    const _createContent = () => {
-        const contentChild = document.createElement('div');
+    const createContent = () => {
+        //const contentChild = document.createElement('div');
         contentChild.classList.add('content-child');
         contentContainer.appendChild(contentChild);
 
@@ -52,6 +53,8 @@ const homePage = (() => {
         contentChild.appendChild(restaurantName);
         contentChild.appendChild(restaurantAbout);
 
+        return contentChild
+
     };
 
     const createPage = () => {
@@ -62,8 +65,8 @@ const homePage = (() => {
     };
 
     const removeContent = () => {
-        while (contentDiv.firstChild) {
-            contentDiv.removeChild(contentDiv.firstChild);
+        while (contentChild.firstChild) {
+            contentChild.removeChild(contentChild.firstChild);
         };
     };
 
