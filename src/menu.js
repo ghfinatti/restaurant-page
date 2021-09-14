@@ -20,7 +20,7 @@ const menuPage = (() => {
     const tunaSushi = new recipe('Tuna Sushi', 'Tuna sushi topped with foie gras');
     recipes.push(tunaSushi);
 
-    const createMenuContent = () => {
+    const createContent = () => {
 
         const contentChild = document.querySelector('.content-child');
 
@@ -42,11 +42,11 @@ const menuPage = (() => {
     const createPage = () => {
         homePage.createHeader();
         homePage.createContentContainer();
-        createMenuContent();
+        createContent();
     };
 
-    return {createPage}
+    return { createPage }
 
 })();
 
-export {menuPage}
+export { menuPage }

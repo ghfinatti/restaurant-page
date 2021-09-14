@@ -1,5 +1,6 @@
 import {homePage} from './home';
 import {menuPage} from './menu';
+import {contactPage} from './contact';
 
 homePage.createPage();
 
@@ -16,4 +17,8 @@ navBtns.forEach(btn => btn.addEventListener('click', () => {
         homePage.createContentContainer();
         homePage.createContent();
     };
+    if (btn.textContent == 'Contact'){
+        homePage.removeContent();
+        contactPage.createPage();
+    }
 }));
