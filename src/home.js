@@ -70,7 +70,7 @@ const homePage = (() => {
         };
     };
 
-    return { createPage, removeContent, createHeader, createNavBtns, createContentContainer };
+    return { createPage, removeContent, createHeader, createNavBtns, createContentContainer, createContent };
 })();
 
 export {homePage};
