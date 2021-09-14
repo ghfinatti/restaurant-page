@@ -4,23 +4,21 @@ class recipe{
     constructor(name, description){
         this.name = name;
         this.description = description;
-    }
-}
-
-// const tunaRecipe = new recipe('Spicy Tuna', 'Salad mix with seared tuna slices and spicy miso sauce');
-// recipes.push(tunaRecipe)
-// const salmonRecipe = new recipe('Butter Lemon Salmon', 'Salmon sashimi with butter lemon and soy sauce');
-// recipes.push(salmonRecipe)
-//const salmonRecipe = new recipe('Butter Lemon Salmon', 'Salmon sashimi with butter lemon and soy sauce');
+    };
+};
 
 const menuPage = (() => {
 
     const recipes = [];
 
     const tunaRecipe = new recipe('Spicy Tuna', 'Salad mix with seared tuna slices and spicy miso sauce');
-    recipes.push(tunaRecipe)
+    recipes.push(tunaRecipe);
     const salmonRecipe = new recipe('Butter Lemon Salmon', 'Salmon sashimi with butter lemon and soy sauce');
-    recipes.push(salmonRecipe)
+    recipes.push(salmonRecipe);
+    const salmonSushi = new recipe('Salmon Sushi', 'Salmon Sushi topped with caviar');
+    recipes.push(salmonSushi);
+    const tunaSushi = new recipe('Tuna Sushi', 'Tuna sushi topped with foie gras');
+    recipes.push(tunaSushi);
 
     const createMenuContent = () => {
 
@@ -42,7 +40,6 @@ const menuPage = (() => {
     };
 
     const createPage = () => {
-        // homePage.removeContent();
         homePage.createHeader();
         homePage.createContentContainer();
         createMenuContent();

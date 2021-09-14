@@ -34,7 +34,6 @@ const homePage = (() => {
     };
 
     const createContent = () => {
-        //const contentChild = document.createElement('div');
         contentChild.classList.add('content-child');
         contentContainer.appendChild(contentChild);
 
