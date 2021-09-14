@@ -92,3 +92,16 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
+
+.contact-title, .contact-text{
+    width: fit-content;
+    color: white;
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: flex-start;
+}
+
+.contact-title{
+    font-weight: bold;
+    font-size: 20px;
+}
